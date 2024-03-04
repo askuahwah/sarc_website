@@ -1,0 +1,108 @@
+.eventlist_page {
+    margin-top: 5%;
+    padding: 2%;
+    background: linear-gradient(to right, #001F3F, #003366);
+}
+
+.event_list_title {
+    color: white;
+    
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.event_list {
+    display: flex;
+    padding: 2%;
+    margin-top: 2%;
+    background-color: rgb(64, 240, 240);
+    align-items: flex-start;
+    border-radius: 5px;
+}
+
+
+.event_list img{
+    width: 60%;
+    height: 60%;
+    height: 40vh;
+    border-radius: 5px;
+}
+
+.event_list_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2%;
+    text-align: justify;
+}
+
+.event_list_location {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 80vh;
+}
+
+.event_list_location p span {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.event_list_header_title {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.event_search {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event_search input {
+    padding: 0.5%;
+    width: 40vh;
+}
+
+/* responsive code */
+
+@media only screen and (max-width: 768px) {
+    .eventlist_page {
+        padding-top: 15%;
+    }
+
+    .event_search {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .event_search input{
+        margin-top: 2%;
+        width: 100%;
+    }
+    .event_list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .event_list img {
+        margin-top: 2%;
+    }
+    .event_list_header {
+        display: flex;
+        align-items: center;
+        margin-top: 2%;
+        padding: 1%;
+        width: 100%;
+    }
+    .event_list_location {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 50vh;
+    }
+    .attendance_title span{
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+}
+

@@ -1,0 +1,256 @@
+.home_main {
+    background-color: fff;
+    margin-top: 5%;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('../../assets/main.jpg');
+    background-position: 50%;
+    background-size: cover;
+    cursor: default;
+}
+.home_main::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    z-index: 1; /* Ensure the pseudo-element is above the background image */
+}
+
+.header {
+    color: white;
+} 
+
+.header_a {
+    color: #fff;
+    text-align: center;
+}
+
+.header_a P {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+
+.hero_Section {
+    margin-top: 2%;
+}
+
+.hero {
+    height: 50vh;
+    border-radius: 10px;
+    /* background-image: url('../../../assets/back_res.jpg');    */
+    background-size: cover;
+    background-position: center;    
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero :first-child {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+  
+.button:hover {
+    background-color: #FD6502;
+    cursor: pointer;
+}
+
+
+.about {
+    margin: 2%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.578);
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 gray;
+    margin-bottom: 8%;
+    text-align: justify;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+}
+
+.footer {
+    background-color: rgba(19, 16, 32, 0.957);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 1%;
+    height: 6vh;
+}
+
+
+/* Login page? */
+
+.loginPage_main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("../../assets/login.jpg");
+    background-size: cover;
+    color: #fff; 
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+.loginPage_main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    z-index: 1; /* Ensure the pseudo-element is above the background image */
+}
+
+
+
+.form {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.578);
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 gray;
+
+}
+
+.form h1{
+    text-align: center;
+}
+
+.form input {
+    width: 50vh;
+    outline: none;
+    font-size: 1rem;
+    padding: 2%;
+}
+
+.form button {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    transition: all 0.3s ease;
+    padding: 1%;
+    margin-top: 4%;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #cdd1b5;
+}
+
+.form button:hover {
+    box-shadow: 0 0 10px #b621fe;
+    color: black;
+}
+
+
+/* dashboard page */
+/* style.module.css */
+
+.dashboard_main {
+    padding: 2%;
+    padding-top: 7%;
+    background-color: #00244A;
+    min-height: 100vh;
+}
+
+
+  
+  .dashboard_main img {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dashboard_profile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #40F0F0; 
+    padding: 2%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px;
+  }
+
+
+  
+  .profile {
+    margin-left: 2%;
+  }
+  
+  .profile p {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+  
+  .profile span {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+.event {
+    background-color: #40F0F0;
+    margin-top: 2%;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.event_a {
+    display: flex;
+    margin-top: 2%;
+    align-items: center;
+}
+
+.event_a img {
+    width: 8vh;
+    height: 8vh;
+}
+
+.event_a p{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 3%;
+    padding-top: 1%;
+}
+
+
+/* Responsive code  */
+
+@media only screen and (max-width: 768px) {
+    .home_main {
+        padding: 2%;
+        padding-top: 15%;
+        
+    }
+    .hero p {
+        text-align: center;
+    }
+    .dashboard_main {
+        padding-top: 15%;
+    }
+    .form {
+        width: 80%;
+    }
+    .form input {
+        width: 100%;
+    }
+    .dashboard_main {
+        padding-top: 20%;
+    }
+}
