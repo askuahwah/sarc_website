@@ -26,6 +26,16 @@ const EventList = () => {
     try {
       const jwtToken = JSON.parse(localStorage.getItem("authTokens"));
 
+      // Check if the user is already attending the event
+      if (
+        events.find(
+          (event) => event.id === eventId && event.attendees.includes(user.id)
+        )
+      ) {
+        window.alert("You have already marked attendance for this event!");
+        return;
+      }
+
       // Send the POST request to mark attendance
       await axios.post(
         `http://localhost:8000/event/events/mark-attendance/${eventId}`,
@@ -120,7 +130,7 @@ const EventList = () => {
                   </p>
                 </div>
                 <div className={style.attendance_title}>
-                  <span >Attendance: </span>
+                  <span>Attendance: </span>
                   <input
                     type="checkbox"
                     checked={event.attendees.includes(user.id)}

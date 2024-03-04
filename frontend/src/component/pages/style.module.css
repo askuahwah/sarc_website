@@ -163,7 +163,7 @@
 .dashboard_main {
     padding: 2%;
     padding-top: 7%;
-    background-color: #00244A;
+    background-image: url('../../assets/login.jpg');
     min-height: 100vh;
 }
 

@@ -64,6 +64,10 @@
     padding: 0.5%;
     width: 40vh;
 }
+.attendance_title span{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
 
 /* responsive code */
 
@@ -100,9 +104,6 @@
         align-items: center;
         width: 50vh;
     }
-    .attendance_title span{
-        font-weight: 700;
-        font-size: 1.1rem;
-    }
+    
 }
 
