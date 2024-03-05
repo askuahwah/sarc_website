@@ -15,13 +15,12 @@ const Dashboard = () => {
     const fetchAttendedEvents = async () => {
       console.log(user.user_id);
       try {
-        // Check if user is authenticated
+        
         if (!user) {
-          // Redirect to login if not authenticated
+      
           window.alert("You are not authenticated. Please log in.");
           history("/login");
         } else {
-          // Fetch events attended by the user
           const response = await axios.get(
             `http://localhost:8000/event/events/`
           );
@@ -37,8 +36,6 @@ const Dashboard = () => {
         console.error("Error fetching attended events:", error);
       }
     };
-
-    // Call the fetchAttendedEvents function
     fetchAttendedEvents();
   }, [user, history]);
 
@@ -54,7 +51,6 @@ const Dashboard = () => {
             <p>
               <span>Email: </span> {user.email}
             </p>
-            {/* Additional user information can be displayed here */}
           </div>
         </div>
       )}    

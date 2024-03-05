@@ -26,7 +26,6 @@ const EventList = () => {
     try {
       const jwtToken = JSON.parse(localStorage.getItem("authTokens"));
 
-      // Check if the user is already attending the event
       if (
         events.find(
           (event) => event.id === eventId && event.attendees.includes(user.id)
@@ -36,7 +35,6 @@ const EventList = () => {
         return;
       }
 
-      // Send the POST request to mark attendance
       await axios.post(
         `http://localhost:8000/event/events/mark-attendance/${eventId}`,
         null,
@@ -48,7 +46,7 @@ const EventList = () => {
         }
       );
 
-      // Update state to reflect the attendance change
+
       setEvents((prevEvents) =>
         prevEvents.map((event) =>
           event.id === eventId
@@ -57,7 +55,6 @@ const EventList = () => {
         )
       );
 
-      // Show alert after marking attendance
       window.alert("Attendance marked successfully!");
     } catch (error) {
       console.error("Error updating attendance:", error);
