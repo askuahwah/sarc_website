@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { jwtDecode as jwt_decode } from "jwt-decode";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 
 function Navbar() {
@@ -18,13 +18,13 @@ function Navbar() {
         style={{ backgroundColor: "black" }}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" exact={true} to="/">
             <img
               style={{ width: "10vh", padding: "6px" }}
               src="https://team23.sarc-iitb.org/static/SARC%20WHITE.png"
               alt=""
             />
-          </Link>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -42,60 +42,78 @@ function Navbar() {
                 <NavLink
                   className="nav-link"
                   activeClassName="active"
-                  exact
+                  exact={true}
                   to="/"
                 >
                   Home
                 </NavLink>
-                
               </li>
               <NavLink
-                  className="nav-link"
-                  activeClassName="active"
-                  to="https://team23.sarc-iitb.org/contact/"
-                >
-                  About
-                </NavLink>
+                className="nav-link"
+                activeClassName="active"
+                exact={true}
+                to="https://team23.sarc-iitb.org/contact/"
+              >
+                About
+              </NavLink>
               {token !== null && (
                 <>
                   <li className="nav-item">
-                    <NavLink className="nav-link" activeClassName="active" to="/dashboard">
+                    <NavLink
+                      className="nav-link"
+                      activeClassName="active"
+                      to="/dashboard"
+                    >
                       Dashboard
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" activeClassName="active" to="/event">
+                    <NavLink
+                      className="nav-link"
+                      activeClassName="active"
+                      exact={true}
+                      to="/event"
+                    >
                       Events
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <Link
+                    <NavLink
                       className="nav-link"
                       onClick={logoutUser}
                       style={{ cursor: "pointer" }}
+                      exact={true}
                       to="/"
                     >
                       Logout
-                    </Link>
+                    </NavLink>
                   </li>
                 </>
               )}
               {token === null && (
                 <>
                   <li className="nav-item">
-                    <NavLink className="nav-link" activeClassName="active" to="/login">
+                    <NavLink
+                      className="nav-link"
+                      activeClassName="active"
+                      exact={true}
+                      to="/login"
+                    >
                       Login
                     </NavLink>
                   </li>
                   <li className="nav-item">
-                    <NavLink className="nav-link" activeClassName="active" to="/register">
+                    <NavLink
+                      className="nav-link"
+                      activeClassName="active"
+                      exact={true}
+                      to="/register"
+                    >
                       Register
                     </NavLink>
                   </li>
                 </>
               )}
-
-              
             </ul>
           </div>
         </div>
