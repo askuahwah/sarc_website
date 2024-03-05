@@ -9,11 +9,11 @@ Welcome to the documentation for the Django and React.js full-stack web applicat
 
 # Features
 
-○ User authentication and registration page.
-○ Event creation, editing, and deletion functionalities.
-○ Event browsing with filtering and search capabilities.
-○ User profiles with event attendance history.
-○ Responsive design for optimal viewing on various devices.
+- User authentication and registration page.
+- Event creation, editing, and deletion functionalities.
+- Event browsing with filtering and search capabilities.
+- User profiles with event attendance history.
+- Responsive design for optimal viewing on various devices.
 
 # Prerequisites
 
