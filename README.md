@@ -1,13 +1,13 @@
+# SARC Website
 
 Welcome to our state-of-the-art event management platform! We've designed a user-friendly interface with features like secure authentication, easy event creation, and seamless browsing. Explore events, track your attendance history, and enjoy a responsive design for an optimal experience on any device.
 
-```markdown
 # Django and React.js Full-Stack Web Application
 
 Welcome to the documentation for the Django and React.js full-stack web application. This project combines the Django framework for the backend and React.js for the frontend, creating a powerful and modern web application.
 
 
-## Features
+# Features
 
 ○ User authentication and registration page.
 ○ Event creation, editing, and deletion functionalities.
@@ -15,7 +15,7 @@ Welcome to the documentation for the Django and React.js full-stack web applicat
 ○ User profiles with event attendance history.
 ○ Responsive design for optimal viewing on various devices.
 
-## Prerequisites
+# Prerequisites
 
 Ensure that you have the following prerequisites installed on your machine:
 
